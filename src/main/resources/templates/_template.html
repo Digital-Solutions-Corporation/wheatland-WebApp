@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheatland</title>
+    <link rel="stylesheet" type="text/css" th:href="@{~/css/style.css}">
+</head>
+<body>
+
+<header th:fragment="header" class="header">
+
+<nav id="menu-h">
+    <ul>
+        <li><a th:href="@{~/home}">Home</a></li>
+        <li><a th:href="@{~/ong/new}">Cadastre uma ONG</a></li>
+        <li><a th:href="@{~/ongs}">ONGS</a></li>
+        <li><a th:href="@{~/usuario/new}">Cadastro de Usuario</a></li>
+    </ul>
+</nav>
+
+</header>
+</body>
+</html>

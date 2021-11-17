@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head th:include="_template :: head"></head>
+
+<body>
+
+    <header th:include="_template :: header" class="header"></header>
+
+    <h1>Cadastro de ONGs</h1>
+
+    <div id="inputform-container">
+        <form id="inputform" action="/addOng" method="post" th:object="${ong}">
+            <div class="inputfield">
+                <label for="nome" class="inputlabel">Nome</label>
+                <input name="nome" id="nome" class="inputfield-input">
+                <span th:errors="*{nome}"></span>
+            </div>
+            <div class="inputfield">
+                <label for="descricao" class="inputlabel">Descricao</label>
+                <textarea cols="" name="descricao" id="descricao" class="inputfield-input"></textarea>
+                <span th:errors="*{descricao}"></span>
+            </div>
+            <div class="inputfield">
+                <label for="email" class="inputlabel">Email</label>
+                <input name="email" id="email" class="inputfield-input">
+            </div>
+            <div class="inputfield">
+                <label for="cnpj" class="inputlabel">CNPJ</label>
+                <input name="cnpj" id="cnpj" class="inputfield-input">
+                <span th:errors="*{cnpj}"></span>
+            </div>
+            <button id="submit-button">Cadastrar</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

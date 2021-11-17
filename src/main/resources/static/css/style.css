@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin: 0;
+}
+
+#home-logo {
+    width: 512px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+#menu-h{
+    background-color: rgb(37, 37, 39);
+}
+
+#menu-h ul {
+    max-width: 800px;
+    list-style: none;
+    padding: 0;
+}
+
+#menu-h ul li {
+    display: inline;
+}
+
+#menu-h ul li a {
+    color: #FFF;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .4s;
+}
+
+#menu-h ul li a:hover {
+    background-color: rgb(255, 222, 131);
+}
+
+#menu-h ul li:last-child a {
+    float: right;
+    background-color: rgb(255, 222, 131    );
+    color:rgb(37, 37, 39);
+    /*background-color: #FFDE83 */
+}
+
+#inputform-container {
+    display: block;
+    padding: 16px;
+    padding-bottom: 128px;
+}
+
+#inputform {
+    display: block;
+    width: fit-content;
+    border: 1px solid rgb(37, 37, 39);
+    padding: 4em 4em;
+    padding-top: 3em;
+    border-radius: 32px;
+}
+
+.inputfield {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputfield:not(:first-child) {
+    margin-top: 32px;
+}
+
+.inputlabel {
+    margin-top: 16px;
+}
+
+.inputfield-input {
+    box-sizing:content-box;
+    padding: 4px 8px;
+}
+
+#submit-button {
+    display: block;
+    margin-top: 32px;
+    padding: 8px 24px;
+    background-color: rgb(255, 222, 131    );
+    color:rgb(37, 37, 39);
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    transition: transform 100ms ease-in-out;
+    border-radius: 16px;
+}
+
+#submit-button:hover {
+    transform: scale(1.1);
+}
+
+.ong {
+    border: 1px solid rgb(37, 37, 39);
+    padding: 32px;
+    border-radius: 16px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.ong:not(:first-child) {
+    margin-top: 32px;
+}
+
+.ong .user-info {
+    margin: 0;
+}
+
+.ong .user-action {
+    margin: 0;
+}
+
+.content {
+    padding: 32px;
+}
+
+.ong-delete-btn {
+    text-decoration: none;
+    display: block;
+    width: 128px;
+    margin-top: 16px;
+    padding: 8px 16px;
+    background-color: rgb(255, 131, 137);
+    color:rgb(37, 37, 39);
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    transition: transform 100ms ease-in-out;
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+}
+
+
+.ong-delete-btn:hover {
+    transform: scale(1.1);
+}
+

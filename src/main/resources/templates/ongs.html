@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head th:include="_template :: head"></head>
+
+<body>
+
+    <header th:include="_template :: header" class="header"></header>
+
+    <h1>Lista de ONGs</h1>
+
+    <main class="content">
+        <div th:each="ong : ${ongs}" class="ong">
+            <div class="user-info">
+                <h4 th:text="${ong.nome}"></h4>
+                <p th:text="${ong.descricao}"></p>
+                <p th:text="${ong.cnpj}"></p>
+
+            </div>
+            <div class="user-action">
+                <a th:href="${'/deleteOng/' + ong.id }" class="ong-delete-btn"> <span>delete</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

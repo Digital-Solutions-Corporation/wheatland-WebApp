@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head th:include="_template :: head"></head>
+
+<body>
+
+    <header th:include="_template :: header" class="header"></header>
+
+    <h1>Cadastro de Usuarios</h1>
+
+    <div id="inputform-container">
+        <form id="inputform" action="/addUsuario" method="post" th:object="${usuario}">
+            <div class="inputfield">
+                <label for="nome" class="inputlabel">Nome</label>
+                <input name="nome" id="nome" class="inputfield-input">
+                <span th:errors="*{nome}"></span>
+            </div>
+
+            <div class="inputfield">
+                <label for="cpf" class="inputlabel">CPF</label>
+                <input name="cpf" id="cpf" class="inputfield-input">
+                <span th:errors="*{cpf}"></span>
+            </div>
+
+            <div class="inputfield">
+                <label for="email" class="inputlabel">Email</label>
+                <input name="email" id="email" class="inputfield-input">
+            </div>
+
+            <div class="inputfield">
+                <label for="senha" class="inputlabel">Senha</label>
+                <input name="senha" id="senha" class="inputfield-input">
+                <span th:errors="*{senha}"></span>
+            </div>
+
+            <div class="inputfield">
+                <label for="idade" class="inputlabel">Idade</label>
+                <input name="idade" id="idade" class="inputfield-input">
+                <span th:errors="*{idade}"></span>
+            </div>
+
+            <div class="inputfield">
+                <label for="genero" class="inputlabel">Genero</label>
+                <select name="genero" id="genero" class="inputfield-input">
+                    <option th:each="genOpt : ${T(com.fiap.wheatland.wheatland.enums.Genero).values()}"
+                        th:value="${genOpt}" th:text="${genOpt}"></option>
+                </select>
+            </div>
+
+            <button id="submit-button">Cadastrar</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
