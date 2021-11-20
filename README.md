@@ -12,7 +12,7 @@
 https://www.youtube.com/watch?v=_uJIbL55C_c
 #
 
-## Instruções para execução
+## Instruções para execução e testes
 - Abra a pasta do projeto em um terminal e execute o comando: `mvnw spring-boot:run`;
 - Abra no navegador a URL: `localhost:8080/home`;
 - Clique no botão superior "Cadastro de usuário";
